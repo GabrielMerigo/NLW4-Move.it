@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import { CompletedChallanges } from '../Components/CompletedChallanges'
 
 import { ExperienceBar } from "../Components/ExperienceBar"
 import { Profile } from "../Components/Profile"
@@ -16,6 +17,7 @@ export default function Home() {
     <section>
       <div>
         <Profile />
+        <CompletedChallanges />
       </div>
       <div>
 
