@@ -1,0 +1,7 @@
+.contdownContainer{
+    display: flex;
+    font-weight: 600;
+    font-size: Rajdhani;
+    font-weight: 600;
+    color: var(--title);
+}
