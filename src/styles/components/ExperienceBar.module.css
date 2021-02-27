@@ -26,5 +26,5 @@
   span.currentExperience{
     position: absolute;
     top: 12px;
-    transform: translateX(110%);
+    transform: translateX(-50%);
   }
