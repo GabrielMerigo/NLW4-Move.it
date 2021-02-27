@@ -1,12 +1,12 @@
 import '../styles/global.css'
 
-import { ChallangeContext } from '../contexts/ChallangeContext'
+import { ChallangeContext, ChallangeProvider } from '../contexts/ChallangeContext'
 
 function MyApp({ Component, pageProps }) {
   return (
-    <ChallangeContext.Provider value={"teste"}>
+    <ChallangeProvider>
       <Component {...pageProps} />
-    </ChallangeContext.Provider>
+    </ChallangeProvider>
   )
 }
 
