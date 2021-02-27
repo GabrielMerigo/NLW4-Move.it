@@ -6,7 +6,7 @@ export function ChallangeBox(){
     return (
         <div className={styles.ChallangeBoxContainer}>
             { hasActiveChallange ? (
-                <div className={styles.challangeActive}>
+                <div className={styles.challengeActive}>
                     <header>Ganhe 400 xp</header>
                     <main>
                         <img src="icons/body.svg"/>

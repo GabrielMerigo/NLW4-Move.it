@@ -38,14 +38,14 @@
    margin: 1rem;
 }
 
-.challangeActive{
+.challengeActive{
     height: 100%;
 
     display: flex;
     flex-direction: column;
 }
 
-.challangeActive header{
+.challengeActive header{
     color: var(--blue);
     font-weight: 600;
     font-size: 1.25rem;
@@ -53,6 +53,17 @@
     border-bottom: 1px solid var(--gray-line);
 }
 
-.challangeActive main{
-    flex:1;
+.challengeActive main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
+
+.challengeActive main strong {
+    font-weight: 600;
+    font-size: 2rem;
+    color: var(--title);
+    margin: 1.5rem 0 1rem;
+  }
