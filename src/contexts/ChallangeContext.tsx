@@ -3,9 +3,17 @@ import { Interface } from 'readline'
 import challanges from '../../challenges.json'
 
 
+interface Challenge{
+    type: 'body' | 'eye';
+    description: string;
+    amount:number;
+}
+
 interface challangesContextData {
     level: number,
     currentExperience: number,
+    challangesCompleted: number,
+    activeChallenge: Challenge,
     levelUp: () => void, 
     startNewChallange: () => void;
     
@@ -22,21 +30,28 @@ export function ChallangeProvider({ children }:ChallengesProviderProps){
     const [currentExperience, setCurrentExperience] = useState(0)
     const [challangesCompleted, setChallangesCompleted] = useState(0)
 
+    const [activeChallenge, setActiveChallenge] =  useState(null)
+
     function levelUp(){
         setLevel(level + 1)
     }
 
     function startNewChallange(){
-        console.log('New Challange')
+        const randomNewChallengeIndex = Math.floor(Math.random() * challanges.length)
+        const challenge = challanges[randomNewChallengeIndex]
+        setActiveChallenge(challenge)
+
     }
 
     return (
         <ChallangeContext.Provider 
         value={{level, 
                 currentExperience,
-                challangesCompleted, 
+                challangesCompleted,
+                activeChallenge, 
                 levelUp,
-                startNewChallange}}>
+                startNewChallange,
+                }}>
             {children}
         </ChallangeContext.Provider>
     )
