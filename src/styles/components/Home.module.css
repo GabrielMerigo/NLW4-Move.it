@@ -15,3 +15,8 @@
     gap: 6.25rem;
     align-content: center;
 }
+
+.sectionContainer{
+    max-width: 1200px;
+    margin-top: 2.1rem;
+} 

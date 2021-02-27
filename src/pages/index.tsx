@@ -1,4 +1,6 @@
 import Head from 'next/head'
+
+import { ChallangeBox } from '../Components/ChallangeBox'
 import { CompletedChallanges } from '../Components/CompletedChallanges'
 import { Countdown } from '../Components/Countdown'
 
@@ -17,14 +19,14 @@ export default function Home() {
       </Head>
     <ExperienceBar />
 
-    <section>
+    <section className={styles.sectionContainer}>
       <div>
         <Profile />
         <CompletedChallanges />
         <Countdown />
       </div>
       <div>
-
+          <ChallangeBox />
       </div>
     </section>
   </div>
