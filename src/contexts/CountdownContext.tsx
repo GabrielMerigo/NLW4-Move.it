@@ -16,7 +16,7 @@ interface CountdownProviderProps{
 }
 
 
-const CountdownContext = createContext({} as CountdownContextData)
+export const CountdownContext = createContext({} as CountdownContextData)
 
 let countdownTimeOut: NodeJS.Timeout
 
@@ -38,6 +38,7 @@ export function CountdownProvider({children}: CountdownProviderProps){
         clearTimeout(countdownTimeOut)
         setIsActive(false)
         setTime(0.1 * 60)
+        setHasFinished(false)
     }
 
     useEffect(() => {
