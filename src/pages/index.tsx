@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import { GetServerSideProps } from 'next'
 
 import { ChallangeBox } from '../Components/ChallangeBox'
 import { CompletedChallanges } from '../Components/CompletedChallanges'
@@ -36,3 +37,19 @@ export default function Home() {
   </div>
   )
 }
+
+
+export const getServerSideProps: GetServerSideProps = async (ctx) => {
+
+  const {level, currentExperience, challangesCompleted} = ctx.req.cookies;
+
+  return {
+    props: {
+      level,
+      currentExperience,
+      challangesCompleted
+    }
+  }
+}
+
+//Bcka
