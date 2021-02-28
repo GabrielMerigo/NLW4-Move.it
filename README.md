@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./public/logo-full.svg" />
+    ![teste](moveit.gif)
 </p>
 
 <p align="center">
