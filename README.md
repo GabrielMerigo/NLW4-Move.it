@@ -49,7 +49,7 @@ O projeto Move.it, desenvolvido durante a quarta edição da NextLevelWeek by [R
 (certifique-se de ter instalado na sua máquina o [Node](https://nodejs.org/en/) e o [Yarn](https://yarnpkg.com/))
 1. Abra o terminal na pasta desejada para clonar o repositório e execute o comando:
 ``` bash
-git clone https://github.com/th1ag0-Zz/NLW-04-Move.it.git
+git clone https://github.com/gabrielmerigo/NLW-04-Move.it.git
 ```
 2. Depois de concluído, execute os seguintes comandos para iniciar o server e será aberto no seu navegador uma aba com o projeto já rodando:
 ``` bash
