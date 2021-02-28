@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="./public/logo-full.svg" />
+</p>
+
 ![teste](moveit.gif)
 
 <p align="center">
