@@ -1,6 +1,4 @@
-<p align="center">
-    ![teste](moveit.gif)
-</p>
+![teste](moveit.gif)
 
 <p align="center">
   <img alt="Last Commit" src="https://img.shields.io/github/last-commit/th1ag0-Zz/NLW-04-Move.it?color=rgb(89,101,224)">
