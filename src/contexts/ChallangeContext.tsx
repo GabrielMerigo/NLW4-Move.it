@@ -23,14 +23,17 @@ interface challangesContextData {
 
 interface ChallengesProviderProps{
     children: ReactNode;
+    level: number;
+    currentExperience: number;
+    challangesCompleted: number
 }
 
 export const ChallangeContext = createContext({} as challangesContextData)
 
-export function ChallangeProvider({ children }:ChallengesProviderProps){
-    const [level, setLevel] = useState(1)
-    const [currentExperience, setCurrentExperience] = useState(0)
-    const [challangesCompleted, setChallangesCompleted] = useState(0)
+export function ChallangeProvider({ children,...rest }:ChallengesProviderProps){
+    const [level, setLevel] = useState(rest.level ?? 1)
+    const [currentExperience, setCurrentExperience] = useState(rest.currentExperience ?? 0)
+    const [challangesCompleted, setChallangesCompleted] = useState(rest.challangesCompleted ?? 0)
 
     const [activeChallenge, setActiveChallenge] =  useState(null)
 
@@ -41,7 +44,7 @@ export function ChallangeProvider({ children }:ChallengesProviderProps){
     }, [])
 
     useEffect(() => {
-        Cookies.set('Level', String(level))
+        Cookies.set('level', level.toString())
         Cookies.set('currentExperience', String(currentExperience))
         Cookies.set('challangesCompleted', String(challangesCompleted))
         

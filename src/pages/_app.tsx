@@ -5,9 +5,7 @@ import { CountdownProvider } from '../contexts/CountdownContext'
 
 function MyApp({ Component, pageProps }) {
   return (
-    <ChallangeProvider>
-         <Component {...pageProps} />
-    </ChallangeProvider>
+    <Component {...pageProps} />
   )
 }
 

@@ -9,9 +9,20 @@ import { ExperienceBar } from "../Components/ExperienceBar"
 import { Profile } from "../Components/Profile"
 import { CountdownProvider } from '../contexts/CountdownContext'
 import styles from "../styles/components/Home.module.css"
+import { ChallangeProvider } from '../contexts/ChallangeContext'
 
-export default function Home() {
+interface HomeProps{
+  level: number,
+  currentExperience: number, 
+  challangesCompleted: number
+}
+
+export default function Home(props: HomeProps) {
   return (
+    <ChallangeProvider 
+    level={props.level}
+    currentExperience={props.currentExperience}
+    challangesCompleted={props.challangesCompleted}>
     <div className={styles.container}>
       <Head>
         <title>Início | move.it</title>
@@ -35,21 +46,20 @@ export default function Home() {
       </section>
     </CountdownProvider>
   </div>
+  </ChallangeProvider>
   )
 }
 
 
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
 
-  const {level, currentExperience, challangesCompleted} = ctx.req.cookies;
+  const { level, currentExperience, challangesCompleted } = ctx.req.cookies
 
   return {
     props: {
-      level,
-      currentExperience,
-      challangesCompleted
+      level: Number(level ?? 1),
+      currentExperience: Number(currentExperience ?? 0),
+      challangesCompleted: Number(challangesCompleted ?? 0)
     }
   }
 }
-
-//Bcka
