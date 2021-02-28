@@ -8,10 +8,6 @@
   <img alt="License" src="https://img.shields.io/badge/license-MIT-%2304D361?color=rgb(89,101,224)">
 </p>
 
-<p align="center">
-  <img src="./.github/home.svg" />
-</p>
-
 # :pushpin: Tabela de conteúdos
 
 * [Sobre o projeto](#satisfied-sobre-o-projeto)
